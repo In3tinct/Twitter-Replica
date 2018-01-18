@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:http="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" ng-app="homeApp">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/stylesheets/styleHome.css" />
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+    <script src="./controllers/homeController.js"> </script>
+
+</head>
+<body>
+<% include searchNavigationBar.ejs %>
+
+<!--        Main CONTENT PAGE -->
+
+
+
+<div class="container-fluid col-sm-3" id = "welcome">
+
+    <div  id="panelsize">
+        <div class="panel panel-primary" id="toppanel">
+            <div id="panelHeading" class="panel-heading" style="margin-top: 50px;"></div>
+
+            <div id="" class="panel-body" ng-controller="badge_counts">
+
+                <img id="profile_pic" src="/images/timcook.jpg" class="img-rounded"
+                     alt="Cinque Terre" width="70" height="70">
+
+                <input type="button" ng-model="fullName" class="submitLinkName"  ng-click="userProfile(null,null);" value="{{fullName}}">
+                <input type="button" ng-model="userHandle" class="submitLinkName"  ng-click="userProfile(null,null);" value="{{userHandle}}">
+
+
+
+                <div class="container" id = "badges">
+                    <a href="" ng-click="userProfile(null,null);">Tweets <span class="badge" ng-model="tweetCounts">{{tweetCounts}}</span></a>
+                    <a href="" ng-click="userProfile(null,null);">Following <span class="badge" ng-model="followingCounts">{{followingCounts}}</span></a>
+                    <a href="" ng-click="userProfile(null,null);">Follower <span class="badge" ng-model="followersCounts">{{followersCounts}}</span></a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--
+<div class="tweet-content">
+<img src = "https://pbs.twimg.com/profile_images/707016644527149056/QNmQYGUk_normal.jpg" width="45" height="45" id="tweet">
+  <div aria-owns="typeahead-dropdown-4" aria-expanded="false" aria-autocomplete="list" dir="ltr" aria-labelledby="tweet-box-home-timeline-label" name="tweet" id="tweet-box-home-timeline" class="tweet-box rich-editor" spellcheck="true" role="textbox" aria-multiline="true" data-placeholder-default="What's happening?" data-placeholder-poll-composer-on="Ask a question..." contenteditable="true">What’s happening?<br></div>
+
+</div>
+-->
+
+<div class="container-fluid" id="tweetfield" ng-controller="tweetsController">
+
+<div class="outerDiv">
+<textarea class="" rows="1" cols="50" ng-model="tweetpost" name="description" maxlength="140" placeholder="What's Happening?"
+          onfocus="this.rows=5;" style="resize:none;" onblur="this.rows=1;" id="txta">
+</textarea>
+</div>
+
+
+    <div class="" id="txt">
+
+        <textarea style="margin-left: 47px;width: 500px;" rows="1" cols="50" ng-model="tweetpost" name="description" maxlength="140" placeholder="What's Happening?"
+                  onfocus="this.rows=5;" style="resize:none;" onblur="this.rows=1;" id="txta">
+</textarea>
+        <div></div>
+            <input type="button" style="margin-left: 44px;" value="Tweet" id="tweet" ng-click="insertTweet(null,null,false);" onclick=""/>
+
+
+
+        <div ng-repeat="x in tweets">
+
+            <div id="tweets_text" class="panel panel-default" style="margin-left: 290px;width: 500px;">
+
+
+                <ul class="stream-items">
+                    <span ng-if="isRetweetFunction(x.retweet_user);"><strong>You retweeted this</strong></span>
+                    <li style="line-height: inherit;" ng-if="!isRetweetFunction(x.retweet_user);"><strong>{{x.whole_name}}</strong></li>
+                    <li style="line-height: inherit;" ng-if="!isRetweetFunction(x.retweet_user);"><input type="button" class="submitLink" ng-click="userProfile(x.user_id,x.whole_name);" value="{{x.user_id}}"></li>
+                    <li style="line-height: inherit;" ng-if="isRetweetFunction(x.retweet_user);"><input type="button"  class="submitLink" ng-click="userProfile(x.retweet_user,null);" value="{{x.retweet_user}}"></li>
+
+                    <li style="line-height: inherit;">{{x.tweet_comments}}</li>
+                    <input ng-if="!isRetweetFunction(x.retweet_user);" type="button" value="Retweet" id="tweet" ng-click="insertTweet(x.user_id,x.tweet_comments,true);"/>
+                </ul>
+
+            </div>
+            </div>
+
+    </div></div>
+</body>
+</html>

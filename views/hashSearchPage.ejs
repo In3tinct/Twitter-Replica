@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:http="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/style.css"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/stylesheets/styleSearchPage.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+</head>
+
+<body ng-app = "hashSearchPage" ng-controller = "hashSearchController" style="background-color: #f5f8fa">
+
+<div class="row" align="center">
+    <div id = "hash" class="col-md-12" style="background-color: #0084B4">
+        <h1 style="color: white" ng-model="hashTag">{{hashTag}}</h1>
+    </div>
+</div>
+<script src = "controllers/hashsearchController.js"></script>
+
+    <div class="col-sm-8" style="float:right" ng-repeat="x in searchResults">
+
+        <div id="tweets_text" class="panel panel-default">
+        <ul class="stream-items">
+            <li><input type="button" class="submitLink" ng-click="userProfile(x.user_id,x.whole_name);" value="{{x.user_id}}"></li>
+            </br>
+            <li>{{x.tweet_comments}}</li>
+        </ul>
+        </div>
+    </div>
+</body>
+</html>

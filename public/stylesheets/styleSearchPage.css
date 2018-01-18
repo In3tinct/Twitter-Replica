@@ -1,0 +1,55 @@
+#hash
+{
+    margin-top: 56px;
+}
+
+.backgroundImage{
+    background-color: #0084B4 !important;
+    height: 91px;
+    margin-right: -15px;
+    margin-left: -16px;
+    margin-top: 55px;
+    margin-top: -15px;
+}
+
+.button{
+    color: #292f33;
+    font-size: 13px;
+    padding: 3px 11px 5px;
+    font-weight: bold;
+    line-height: normal;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid #e1e8ed;
+    background-repeat: no-repeat;
+    overflow: visible;
+    margin-top: 10px;
+}
+
+.button:hover {
+    color: #292f33;
+    text-decoration: none;
+    background-color: #e1e8ed;
+    background-image: linear-gradient(#fff, #e1e8ed);
+    border-color: #e1e8ed;
+}
+
+.submitLink:focus {
+    outline: none;
+}
+
+.submitLink {
+    background-color: transparent;
+    text-decoration: underline;
+    border: none;
+    color: blue;
+    cursor: pointer;
+}
+
+.stream, .stream-container, .stream-items {
+    position: relative;
+    margin-left: 0;
+    list-style: none;
+}

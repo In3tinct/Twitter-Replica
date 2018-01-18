@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="profileApp">
+<head>
+    <title>Successful Login</title>
+   <link rel='stylesheet' href='/stylesheets/styleProfile.css' />
+    <link rel="stylesheet" href="/stylesheets/styleHome.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="./controllers/profileController.js"> </script>
+    <script src="./controllers/homeController.js"> </script>
+</head>
+
+<% include searchNavigationBar.ejs %>
+<body>
+
+
+
+
+<div ng-controller="profileController">
+
+
+<div class = "backgroundImage1">
+</div>
+<div class="navBarPF">
+    <ul>
+        <li><a href="" ng-click="fetchTweetsOnClick()" ><span class="letters">tweets</span><div></div><span ng-model="tweetCounts" id="count1">{{tweetCounts}}</span></a></li>
+        <li><a href="" ng-click="fetchFollowingList()"><span class="letters">following</span><div></div><span ng-model="followingCounts" id="count2">{{followingCounts}}</span></a></li>
+        <li><a href="" ng-click="fetchFollowersList()"><span class="letters">followers</span><div></div><span ng-model="followersCounts" id="count3">{{followersCounts}}</span></a></li>
+    </ul>
+
+</div>
+
+
+<div id="browser">
+    <div id = "ProfilePicWindow">
+        <img id="pic" src="/images/timcook.jpg" class="img-rounded pull-left"
+             alt="Cinque Terre">
+
+    </div>
+        <!--<div id = "insideProfilePicWindow">
+
+        </div>-->
+
+    <div class="col-sm-3" style="margin-top: 20px">
+        <a class="submitLinkName" style="margin-left: 20px;" href=""  ng-model="fullName"> {{fullName}}</a>
+        <div></div>
+        <a class="submitLinkName" style="margin-left: 20px;font-size: 15px" href=""  ng-model="userHandle">{{userHandle}} </a>
+    </div>
+
+    </div>
+
+    <div ng-hide="followingClicked" class="container col-sm-8" style="float:right;height:200px">
+        <div class="col-sm-4" style="float: left;" ng-repeat="following in followingList">
+            <div class="panel panel-primary">
+                <div class="panel-body" style="height:200px">
+                    <div class = "backgroundImage2"></div>
+                    <span style="color: #292f33; font-weight: 700; font-size: 18px;">{{following.whole_name}}</span>
+                    <div></div>
+                    <span>{{following}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-hide="followersClicked" class="container col-sm-8" style="float:right;height:200px">
+        <div class="col-sm-4" style="float: left;" ng-repeat="followers in followersList">
+            <div class="panel panel-primary">
+                <div class="panel-body" style="height:200px">
+                    <div class = "backgroundImage2"></div>
+                    <span style="color: #292f33; font-weight: 700; font-size: 18px;">{{followers.whole_name}}</span>
+                    <div></div>
+                    <span>{{followers}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div ng-hide="tweetsClicked" class="stream panel panel-primary col-sm-7" style="float:right;margin-right:50px">
+
+<div class="tweet col-sm-6" style="float:left; margin-right:50px" ng-repeat="x in tweets">
+    <ol class="stream-items">
+
+            <li style="line-height: inherit;" class="tweetText"><strong>{{x.whole_name}}</strong><input type="button" class="submitLink" value="{{x.user_id}}"></li>
+            <li style="line-height: inherit;">{{x.tweet_comments}}</li>
+        </ol>
+</div>
+
+
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='/stylesheets/styleSignUp.css' />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="./controllers/signupcontroller.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="image" style="background-image: url(../images/twitter_image.png);" >
+
+    </div>
+</div>
+<div id = "divSignUp" class = "col-sm-6" ng-app="registerApp" ng-controller="registercontroller">
+    <h1 class=" header">Join Twitter Today.</h1>
+    <form>
+
+        <div class="alert alert-danger" ng-hide="invalid_login">
+            <strong>User Already Exist Please use a different user handle</strong>
+        </div>
+
+        <div class="form-group col-sm-7">
+            <input type="text" class="form-control" id="name" ng-model="first_name" placeholder="First Name" required>
+        </div>
+
+        <div class="form-group col-sm-7">
+            <input type="text" class="form-control" id="lastname" ng-model="last_name" placeholder="Last Name" required>
+        </div>
+
+        <div class="form-group col-sm-7 ">
+            <input type="email" class="form-control" id="email" ng-model="email" placeholder="Email" required>
+        </div>
+        <div class="form-group col-sm-7 ">
+            <input type="password" class="form-control" id="password" ng-model="password" placeholder="Password" required>
+        </div>
+
+        <div class="form-group col-sm-7 ">
+            <input type="text" class="form-control" id="userhandle" ng-model="birthdate" placeholder="Birthdate" required>
+        </div>
+
+        <div class="form-group col-sm-7 ">
+            <input type="text" class="form-control" id="userhandle" ng-model="contact" placeholder="Contact Information" required>
+        </div>
+
+        <div class="form-group col-sm-7 ">
+            <input type="text" class="form-control" id="userhandle" ng-model="location" placeholder="Location" required>
+        </div>
+
+        <div class="form-group col-sm-7 ">
+            <input type="text" class="form-control" id="userhandle" ng-model="userhandle" placeholder="Handle" required>
+        </div>
+
+        <div class="form-group col-sm-7">
+            <button type="submit" class="buttonLogin btn" ng-click="signup();" >Sign Up</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+/*
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}*/
+#htext:hover{
+  color: #0084B4;
+}
+#icon{
+  padding-top: 10px;
+  margin-left : 600px;
+}
+#Home:hover{
+  background-color: #ffffff;
+}
+#Home{
+  background-color: #ffffff;
+}
+#globaltweet:hover{
+  background-color: #4169E1 ;
+}
+#globaltweet {
+  color: #fff;
+  cursor: pointer;
+  height: 32px;
+  margin-top: 7px;
+  margin-right: 50px;
+  opacity: 1;
+  -ms-filter: "alpha(opacity=80)";
+  padding: 0 7px 0 8px;
+  background-color: #0084B4;
+  background: rgba(0,132,180,.8);
+  border-radius: 10px;
+}
+#srch-term
+{
+  margin-right: 50px;
+  border-radius: 15px;
+}
+#profIcon
+{
+  overflow: hidden;
+  margin-right: 25px;
+}
+#btn
+{
+  margin-right: 5px;
+  padding-right: 0px;
+}
+#Home
+{
+  margin-left: 50px;
+}
+#himg
+{
+
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  margin-top: 0px;
+  padding-bottom: 10px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#panelHeading{
+  height: 95px;
+  z-index: -1;
+}
+
+#profile_pic{
+  margin-top: -54px;
+  height: 100px;
+  width: 100px;
+}
+
+#panelsize{
+  top:30px;
+  right:24px;
+}
+#profile_pic
+{
+  margin-bottom: 10px;
+  padding-top: 5px;
+}
+.navbar{
+  border-bottom: dashed;
+  border-bottom-color: #0084B4;
+}
+#txt{
+
+  margin-top: 8px;
+  margin-left: 60px;
+}
+
+#tweets_text{
+
+  margin-top: 16px;
+  height: 130px;
+  width: 378px;
+
+}
+
+.expand {
+  height: 1em;
+  width: 50%;
+  padding: 3px;
+}
+#tweet{
+  color: #fff;
+  cursor: pointer;
+  height: 32px;
+  margin-top: 7px;
+  margin-right: 50px;
+  opacity: 1;
+  -ms-filter: "alpha(opacity=80)";
+  padding: 0 7px 0 8px;
+  background-color: #0084B4;
+  background: rgba(0,132,180,.8);
+  border-radius: 10px;
+}
+#tweet:hover{
+  background-color: #0084B4;
+
+}
+#txta{
+  border-radius: 3px;
+  border-color: #00B7FF;
+  border-style: solid;
+}
+#outerDiv{
+  border-radius: 3px 3px 0 0;
+  position: relative;
+  background-color: #E9F1F8;
+  padding: 10px 12px;
+  margin-top: 150px;
+}
+
+.submitLink {
+  background-color: transparent;
+  text-decoration: underline;
+  border: none;
+  color: blue;
+  cursor: pointer;
+}
+
+.submitLink:focus {
+  outline: none;
+}
+
+.submitLinkName {
+  background-color: transparent;
+  text-decoration: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.submitLinkName:focus {
+  outline: none;
+}
+
+.tweetText{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+.stream, .stream-container, .stream-items {
+  position: relative;
+  margin-left: 0;
+  list-style: none;
+}

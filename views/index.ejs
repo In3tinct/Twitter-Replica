@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='/stylesheets/styleIndex.css' />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+    <script src="./controllers/logincontroller.js"></script>
+</head>
+
+<body ng-app="myApp">
+<div class = "container-fluid">
+
+    <div class="image" style="background-image: url(../images/twitter_image.png);" >
+        <img id="icon" src="../images/twitter_icon.png" style="width :100px; height: 100px" />
+        <div>
+         <form>
+
+             <div ng-controller="openSignup">
+                 <button type="submit" ng-click="signup();" class = "btn btn-lg pull-right" id = "button2" >Sign Up</button>
+             </div>
+
+         </form>
+            </div>
+        <div>
+        <h2 class = "h2" align="center">See what's happening right now.</h2>
+        <p class = "p" align = "center">Find community, conversation and inspiration about things you love.</p>
+        </div>
+    </div>
+</div>
+
+
+    <div id = "logInTable" class="col-sm-3 pull-left" ng-controller="logincontroller">
+        <div id="div">
+        <h3 class="whiteText">Log in to your Account</h3>
+        <form class = "pull-right" >
+            <div class="form-group pull-left">
+                <input type="text" class="form-control" id="name" ng-model="username" placeholder="Name" required>
+            </div>
+            <div class="form-group pull-left">
+                <input type="password" class="form-control" id="password" ng-model="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" ng-click="submit();" class="buttonLogin btn">Log in</button>
+            </div>
+
+            <div class="alert alert-danger" ng-hide="invalid_login">
+                <strong>Incorrect username or password</strong>
+            </div>
+            <div class="alert alert-danger" ng-hide="unexpected_error">
+                <strong>Unexpected error, try again</strong>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 200px;">
+    <div class="col-md-3">
+        <img class="img-responsive" src="/images/image1.jpg" />
+    </div>
+    <div class="col-md-3">
+        <img class="img-responsive" style="height: 293px;" src="/images/image2.jpg" />
+    </div>
+    </div>
+</body>
+</html>

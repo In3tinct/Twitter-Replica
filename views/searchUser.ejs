@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:http="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/style.css"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/stylesheets/styleSearchPage.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+</head>
+
+<body ng-app = "userSearchPage" ng-controller = "userSearchController" style="background-color: #f5f8fa">
+
+<div class="row" align="center">
+    <div id = "hash" class="col-md-12" style="background-color: #0084B4">
+        <h1 style="color: white">You searched for {{searchKey}}</h1>
+    </div>
+</div>
+<script src = "controllers/usersearchController.js"></script>
+
+
+<div ng-hide="followingClicked" class="container col-sm-8" style="float:right;height:200px">
+    <div class="col-sm-4" style="float: left; margin-top: 15px;" ng-repeat="x in searchResults">
+        <div class="panel panel-primary">
+            <div class="panel-body" style="height:200px">
+                <div class = "backgroundImage"></div>
+                <span style="color: #292f33; font-weight: 700; font-size: 18px;">{{x.whole_name}}  </span><span>{{x.user_id}}</span>
+                <div></div>
+                <input ng-hide="{{x.isFollowed}}" class="button" value="Follow" type="button" ng-click="follow(x.user_id)">
+                <input ng-disabled="true" ng-hide="!{{x.isFollowed}}" class="button" value="Following" type="button">
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

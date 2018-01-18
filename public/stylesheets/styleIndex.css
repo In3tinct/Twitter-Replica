@@ -1,0 +1,152 @@
+
+#logInTable{
+  background-color: #55acee;
+  margin-right: 60px;
+  margin-top: 200px;
+  height: 340px ;
+  padding-top: 60px;
+  width: 320px;
+  border-radius: 10px;
+}
+
+input[type=text]{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+}
+#div1{
+  align : center;
+}
+h3.whiteText{
+  color: floralwhite;
+    margin-left: 20px;
+}
+input::-webkit-input-placeholder{
+  color:white !important;
+}
+input[id = "nameDialog"]::-webkit-input-placeholder{
+    color:lightgrey !important;
+}
+input[id = "passwordDialog"]::-webkit-input-placeholder{
+    color:lightgrey !important;
+}
+
+div.image{
+    background-repeat:no-repeat;
+    background-size:cover;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 20%;
+}
+
+h2.h2{
+    color: floralwhite;
+    font-weight: 200;
+    line-height: 48px;
+    margin-bottom: -5px;
+    margin-left: 100px;
+    margin-top: -80px;
+}
+p.p{
+    color: lightgray;
+    font-size: 21px;
+    font-weight: 200;
+    margin-left: 90px;
+}
+button.buttonLogin
+{
+    margin-top: 20px ;
+    margin-left:20px;
+    width: 230px;
+    height: 3em;
+    padding: 10px 60px ;
+    color: #55acee;
+    background-color: floralwhite;
+}
+#name{
+    margin-left: 20px;
+}
+#password{
+    margin-left: 20px;
+}
+#button2{
+    margin-right: 190px;
+    width: 135px;
+    padding: 5px 30px ;
+    height:40px;
+    color: floralwhite;
+    font-weight: lighter;
+    background-color: transparent;
+    border-color: lightskyblue;
+    margin-top: -90px;
+
+}
+#button1{
+    margin-right: 30px;
+    width: 135px;
+    padding: 5px 30px ;
+    height:40px;
+    color: floralwhite;
+    font-weight: lighter;
+    background-color: transparent;
+    border-color: lightskyblue;
+    margin-top: -90px;
+}
+input{
+    color: floralwhite !important;
+}
+
+#h5{
+    margin-left: 180px;
+    font-weight: 600;
+    color: lightgrey;
+}
+#wrapper{
+    border-radius: 30px;
+}
+#hr{
+    margin-top: 10px;
+}
+input[type="password"]{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+}
+#nameDialog{
+    width : 340px;
+    margin-left: 70px;
+}
+#passwordDialog{
+    width : 340px;
+    margin-left: 70px;
+}
+#buttonDialog{
+    color :  floralwhite;
+    background-color: #55acee;
+    width : 340px;
+    margin-left: 70px;
+}
+
+#icon{
+    margin-left: 90px;
+    margin-top: -10px;
+}
+
+#twitterIcon{
+    margin-left: 220px;
+    margin-top: -10px;
+}
+
+#h6{
+    color: #8899a6;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin-left: 100px;
+}
+#linktoSignUp{
+    color: #1da1f2;
+}
